@@ -1,2 +1,3 @@
-IG_USERNAME = "example_username" 
-IG_PASSWORD = "example_password"
+import os
+IG_USERNAME = os.getenv('INSTAGRAM_USERNAME')
+IG_PASSWORD = os.getenv('INSTAGRAM_PASSWORD')
