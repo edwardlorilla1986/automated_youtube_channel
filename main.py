@@ -34,7 +34,7 @@ IG_PASSWORD = config.IG_PASSWORD
 title = "TRY NOT TO LAUGH (BEST Dank video memes) V1"
 now = datetime.datetime.now()
 videoDirectory = "./DankMemes_" + num_to_month[now.month].upper() + "_" + str(now.year) + "_V" + str(now.day) + "/"
-outputFile = "./" + num_to_month[now.month].upper() + "_" + str(now.year) + "_v" + str[now.day] + ".mp4"
+outputFile = "./" + num_to_month[now.month].upper() + "_" + str(now.year) + "_v" + str(now.day) + ".mp4"
 
 INTRO_VID = ''
 OUTRO_VID = ''
