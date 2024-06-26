@@ -33,8 +33,8 @@ IG_PASSWORD = config.IG_PASSWORD
 
 title = "TRY NOT TO LAUGH (BEST Dank video memes) V1"
 now = datetime.datetime.now()
-videoDirectory = "./DankMemes_" + num_to_month[now.month].upper() + "_" + str(now.year) + "_V" + str[now.day] + "/"
-outputFile = "./" + num_to_month[now.month].upper() + "_" + str[now.year] + "_v" + str[now.day] + ".mp4"
+videoDirectory = "./DankMemes_" + num_to_month[now.month].upper() + "_" + str(now.year) + "_V" + str(now.day) + "/"
+outputFile = "./" + num_to_month[now.month].upper() + "_" + str(now.year) + "_v" + str[now.day] + ".mp4"
 
 INTRO_VID = ''
 OUTRO_VID = ''
@@ -107,4 +107,12 @@ def attemptRoutine():
             routine()
             break
         except OSError as err:
-            print("Routine Failed on OS error: {0
+            print(f"Routine Failed on OS error: {err}")
+            time.sleep(60 * 60)
+
+schedule.every().day.at(DAILY_SCHEDULED_TIME).do(attemptRoutine)
+
+attemptRoutine()
+while True:
+    schedule.run_pending()
+    time.sleep(60)
