@@ -31,5 +31,6 @@ jobs:
       env:
         INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
         INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+        GH_PAT: ${{ secrets.GH_PAT }}
       run: |
         python main.py
